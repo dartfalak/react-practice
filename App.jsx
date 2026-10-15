@@ -8,3 +8,7 @@ function Workout() {
     <div>
       {exercises.map((exercise) => (
         <p>{exercise}</p>
+      ))}
+    </div>
+  );
+}
