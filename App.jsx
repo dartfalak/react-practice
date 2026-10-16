@@ -12,3 +12,22 @@ function Workout() {
     </div>
   );
 }
+
+const workouts = [
+  { name: "Bench Press", sets: 4 },
+  { name: "Squats", sets: 3 },
+  { name: "Deadlift", sets: 4 }
+];
+
+function WorkoutList() {
+  return (
+    <div>
+      {workouts.map((workout) => (
+        <div key={workout.name}>
+          <h3>{workout.name}</h3>
+          <p>Sets: {workout.sets}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
