@@ -31,3 +31,14 @@ function WorkoutList() {
     </div>
   );
 }
+
+const workoutHistory = useMemo(() => {
+  const savedHistory = localStorage.getItem(historyKey);
+
+  if (!savedHistory) {
+    return [];
+  }
+
+  try {
+    const parsedHistory = JSON.parse(savedHistory);
+
