@@ -53,3 +53,7 @@ const workoutHistory = useMemo(() => {
     return [];
   }
 }, [historyKey]);
+
+const totalSeconds = monthlyWorkouts.reduce((total, workout) => {
+  return total + Number(workout.duration || 0);
+}, 0);
