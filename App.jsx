@@ -42,6 +42,17 @@ const workoutHistory = useMemo(() => {
   try {
     const parsedHistory = JSON.parse(savedHistory);
 
+    if (!Array.isArray(parsedHistory)) {
+      return [];
+    }
+
+    return [...parsedHistory].sort(
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
+  } catch {
+    return [];
+  }
+}, [historyKey]);
 
 const totalSeconds = monthlyWorkouts.reduce((total, workout) => {
   return total + Number(workout.duration || 0);
