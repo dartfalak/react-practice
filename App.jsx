@@ -19,18 +19,6 @@ const workouts = [
   { name: "Deadlift", sets: 4 }
 ];
 
-function WorkoutList() {
-  return (
-    <div>
-      {workouts.map((workout) => (
-        <div key={workout.name}>
-          <h3>{workout.name}</h3>
-          <p>Sets: {workout.sets}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 const workoutHistory = useMemo(() => {
   const savedHistory = localStorage.getItem(historyKey);
