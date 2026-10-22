@@ -77,5 +77,7 @@ return (
       continue
     </button>
   </div>
-)
+   );
 }
+
+export default Welcome;
