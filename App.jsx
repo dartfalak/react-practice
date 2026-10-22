@@ -71,7 +71,8 @@ return (
       <h1>welcome!</h1>
     ):(
       <h1>welcome back!</h1>
-    )
-    }
+    )}
+
+    <button onClick={() => setIsFirstVisit(false)}</button>
   </div>
 )
