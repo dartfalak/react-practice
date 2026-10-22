@@ -58,3 +58,9 @@ const totalSeconds = monthlyWorkouts.reduce((total, workout) => {
   return total + Number(workout.duration || 0);
 }, 0);
 
+
+import { useState} from "react";
+
+function Welcome() {
+  const [isFirstVisit, setIsFirstVisit] = useState(true);
+}
