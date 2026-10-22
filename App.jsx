@@ -63,7 +63,7 @@ import { useState} from "react";
 
 function Welcome() {
   const [isFirstVisit, setIsFirstVisit] = useState(true);
-}
+
 
 return (
   <div>
@@ -73,6 +73,9 @@ return (
       <h1>welcome back!</h1>
     )}
 
-    <button onClick={() => setIsFirstVisit(false)}</button>
+    <button onClick={() => setIsFirstVisit(false)}>
+      continue
+    </button>
   </div>
 )
+}
