@@ -69,6 +69,8 @@ return (
   <div>
     {isFirstVisit ? (
       <h1>welcome!</h1>
+    ):(
+      <h1>welcome back!</h1>
     )
     }
   </div>
