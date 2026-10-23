@@ -83,7 +83,7 @@ return (
 export default Welcome;
 
 const handleTaskKeyDown = (e) => {
-  if(e.key === "enter") {
-    addTask();
+  if(e.target.tagName === "BUTTON") {
+    
   }
 }
