@@ -80,6 +80,7 @@ return (
    );
 }
 
+export default Welcome;
 
 const handleTaskKeyDown = (e) => {
   if(e.target.tagName === "BUTTON") {
