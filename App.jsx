@@ -80,7 +80,6 @@ return (
    );
 }
 
-export default Welcome;
 
 const handleTaskKeyDown = (e) => {
   if(e.target.tagName === "BUTTON") {
@@ -88,4 +87,4 @@ const handleTaskKeyDown = (e) => {
   }
 }
 
-button.addEventListener("mouseover", handleMouseOver);
+button.addEventListener("mouseover", handleMouseOver)
