@@ -71,7 +71,7 @@ return (
       <h1>welcome!</h1>
     ):(
       <h1>welcome back!</h1>
-    )}
+    )}.
 
     <button onClick={() => setIsFirstVisit(false)}>
       continue
@@ -81,3 +81,9 @@ return (
 }
 
 export default Welcome;
+
+const handleTaskKeyDown = (e) => {
+  if(e.key === "enter") {
+    addTask();
+  }
+}
