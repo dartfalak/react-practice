@@ -82,10 +82,4 @@ return (
 
 export default Welcome;
 
-const handleTaskKeyDown = (e) => {
-  if(e.target.tagName === "BUTTON") {
-    e.target.style.color = "red";
-  }
-}
-
 button.addEventListener("mouseover", handleMouseOver)
