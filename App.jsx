@@ -64,7 +64,6 @@ import { useState} from "react";
 function Welcome() {
   const [isFirstVisit, setIsFirstVisit] = useState(true);
 
-
 return (
   <div>
     {isFirstVisit ? (
