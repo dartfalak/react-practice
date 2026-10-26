@@ -59,7 +59,28 @@ const totalSeconds = monthlyWorkouts.reduce((total, workout) => {
 }, 0);
 
 
+import { useState} from "react";
 
+function Welcome() {
+  const [isFirstVisit, setIsFirstVisit] = useState(true);
+
+
+return (
+  <div>
+    {isFirstVisit ? (
+      <h1>welcome!</h1>
+    ):(
+      <h1>welcome back!</h1>
+    )}.
+
+    <button onClick={() => setIsFirstVisit(false)}>
+      continue
+    </button>
+  </div>
+   );
+}
+
+export default Welcome;
 
 const handleTaskKeyDown = (e) => {
   if(e.target.tagName === "BUTTON") {
