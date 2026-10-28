@@ -106,3 +106,22 @@ const workouts = useMemo(() => {
 
 const exercises = useMemo(() => {
   const savedExercises =
+    localStorage.getItem("exercises");
+
+  if (!savedExercises) {
+    return [];
+  }
+
+  try {
+    const parsedExercises =
+      JSON.parse(savedExercises);
+
+    if (!Array.isArray(parsedExercises)) {
+      return [];
+    }
+
+    return parsedExercises;
+  } catch {
+    return [];
+  }
+}, []);
