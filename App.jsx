@@ -1,97 +1,97 @@
 
-const exercises = ["Bench Press", "Squats", "Deadlift"];
+// const exercises = ["Bench Press", "Squats", "Deadlift"];
 
-function Workout() {
-  const exercises = ["Bench Press", "Squats", "Deadlift"];
+// function Workout() {
+//   const exercises = ["Bench Press", "Squats", "Deadlift"];
 
-  return (
-    <div>
-      {exercises.map((exercise) => (
-        <p>{exercise}</p>
-      ))}
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       {exercises.map((exercise) => (
+//         <p>{exercise}</p>
+//       ))}
+//     </div>
+//   );
+// }
 
-const workouts = [
-  { name: "Bench Press", sets: 4 },
-  { name: "Squats", sets: 3 },
-  { name: "Deadlift", sets: 4 }
-];
+// const workouts = [
+//   { name: "Bench Press", sets: 4 },
+//   { name: "Squats", sets: 3 },
+//   { name: "Deadlift", sets: 4 }
+// ];
 
-function WorkoutList() {
-  return (
-    <div>
-      {workouts.map((workout) => (
-        <div key={workout.name}>
-          <h3>{workout.name}</h3>
-          <p>Sets: {workout.sets}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
+// function WorkoutList() {
+//   return (
+//     <div>
+//       {workouts.map((workout) => (
+//         <div key={workout.name}>
+//           <h3>{workout.name}</h3>
+//           <p>Sets: {workout.sets}</p>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// }
 
-const workoutHistory = useMemo(() => {
-  const savedHistory = localStorage.getItem(historyKey);
+// const workoutHistory = useMemo(() => {
+//   const savedHistory = localStorage.getItem(historyKey);
 
-  if (!savedHistory) {
-    return [];
-  }
+//   if (!savedHistory) {
+//     return [];
+//   }
 
-  try {
-    const parsedHistory = JSON.parse(savedHistory);
+//   try {
+//     const parsedHistory = JSON.parse(savedHistory);
 
-    if (!Array.isArray(parsedHistory)) {
-      return [];
-    }
+//     if (!Array.isArray(parsedHistory)) {
+//       return [];
+//     }
 
-    return [...parsedHistory].sort(
-      (a, b) => new Date(b.date) - new Date(a.date)
-    );
-  } catch {
-    return [];
-  }
-}, [historyKey]);
+//     return [...parsedHistory].sort(
+//       (a, b) => new Date(b.date) - new Date(a.date)
+//     );
+//   } catch {
+//     return [];
+//   }
+// }, [historyKey]);
 
-const totalSeconds = monthlyWorkouts.reduce((total, workout) => {
-  return total + Number(workout.duration || 0);
-}, 0);
-
-
-import { useState} from "react";
-
-function Welcome() {
-  const [isFirstVisit, setIsFirstVisit] = useState(true);
+// const totalSeconds = monthlyWorkouts.reduce((total, workout) => {
+//   return total + Number(workout.duration || 0);
+// }, 0);
 
 
-return (
-  <div>
-    {isFirstVisit ? (
-      <h1>welcome!</h1>
-    ):(
-      <h1>welcome back!</h1>
-    )}.
+// import { useState} from "react";
 
-    <button onClick={() => setIsFirstVisit(false)}>
-      continue
-    </button>
-  </div>
-   );
-}
+// function Welcome() {
+//   const [isFirstVisit, setIsFirstVisit] = useState(true);
 
-export default Welcome;
 
-const handleTaskKeyDown = (e) => {
-  if(e.target.tagName === "BUTTON") {
-    e.target.style.color = "red";
-  }
-}
+// return (
+//   <div>
+//     {isFirstVisit ? (
+//       <h1>welcome!</h1>
+//     ):(
+//       <h1>welcome back!</h1>
+//     )}.
 
-button.addEventListener("mouseover", handleMouseOver)
+//     <button onClick={() => setIsFirstVisit(false)}>
+//       continue
+//     </button>
+//   </div>
+//    );
+// }
 
-localStorage.setItem(
-  "workouts",
+// export default Welcome;
+
+// const handleTaskKeyDown = (e) => {
+//   if(e.target.tagName === "BUTTON") {
+//     e.target.style.color = "red";
+//   }
+// }
+
+// button.addEventListener("mouseover", handleMouseOver)
+
+ localStorage.setItem(
+   "workouts",
   JSON.stringify(["Chest", "Back", "Legs"])
 );
 
