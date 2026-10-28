@@ -94,3 +94,10 @@ localStorage.setItem(
   "workouts",
   JSON.stringify(["Chest", "Back", "Legs"])
 );
+
+const workouts = useMemo(() => {
+  const savedWorkouts = localStorage.getItem("workouts");
+
+  if (!savedWorkouts) {
+    return [];
+  }
