@@ -64,6 +64,7 @@ import { useState} from "react";
 function Welcome() {
   const [isFirstVisit, setIsFirstVisit] = useState(true);
 
+
 return (
   <div>
     {isFirstVisit ? (
@@ -88,3 +89,8 @@ const handleTaskKeyDown = (e) => {
 }
 
 button.addEventListener("mouseover", handleMouseOver)
+
+localStorage.setItem(
+  "workouts",
+  JSON.stringify(["Chest", "Back", "Legs"])
+);
