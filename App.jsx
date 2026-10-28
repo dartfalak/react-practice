@@ -101,3 +101,5 @@ const workouts = useMemo(() => {
   if (!savedWorkouts) {
     return [];
   }
+  return JSON.parse(savedWorkouts);
+}, []);
