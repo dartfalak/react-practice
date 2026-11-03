@@ -80,35 +80,35 @@
 //    );
 // }
 
-// export default Welcome;
+// // export default Welcome;
 
-// const handleTaskKeyDown = (e) => {
-//   if(e.target.tagName === "BUTTON") {
-//     e.target.style.color = "red";
+// // const handleTaskKeyDown = (e) => {
+// //   if(e.target.tagName === "BUTTON") {
+// //     e.target.style.color = "red";
+// //   }
+// // }
+
+// // button.addEventListener("mouseover", handleMouseOver)
+
+//  localStorage.setItem(
+//    "workouts",
+//   JSON.stringify(["Chest", "Back", "Legs"])
+// );
+
+// const workouts = useMemo(() => {
+//   const savedWorkouts = localStorage.getItem("workouts");
+
+//   if (!savedWorkouts) {
+//     return [];
 //   }
-// }
-
-// button.addEventListener("mouseover", handleMouseOver)
-
- localStorage.setItem(
-   "workouts",
-  JSON.stringify(["Chest", "Back", "Legs"])
-);
+//   return JSON.parse(savedWorkouts);
+// }, []);
 
 const workouts = useMemo(() => {
-  const savedWorkouts = localStorage.getItem("workouts");
+  const savedWorkout =
+    localStorage.getItem("workouts");
 
   if (!savedWorkouts) {
-    return [];
-  }
-  return JSON.parse(savedWorkouts);
-}, []);
-
-const exercises = useMemo(() => {
-  const savedExercises =
-    localStorage.getItem("exercises");
-
-  if (!savedExercises) {
     return [];
   }
 
