@@ -125,3 +125,8 @@ const workouts = useMemo(() => {
     return [];
   }
 }, []);
+
+
+const userSettings = useMemo(() => {
+  const savedSettings = localStorage.getItem("settings");
+}
