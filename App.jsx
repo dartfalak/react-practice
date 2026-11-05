@@ -135,5 +135,5 @@ const userSettings = useMemo(() => {
   }
   try {
     const parsed = JSON.parse(savedSettings);
-  }
+  } 
 }
