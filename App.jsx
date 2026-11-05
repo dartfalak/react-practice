@@ -104,28 +104,6 @@
 //   return JSON.parse(savedWorkouts);
 // }, []);
 
-const workouts = useMemo(() => {
-  const savedWorkouts =
-    localStorage.getItem("workouts");
-
-  if (!savedWorkouts) {
-    return [];
-  }
-
-  try {
-    const parsedWorkouts=
-      JSON.parse(savedWorkouts);
-
-    if (!Array.isArray(parsedWorkouts)) {
-      return [];
-    }
-
-    return parsedWorkouts;
-  } catch {
-    return [];
-  }
-}, []);
-
 
 const userSettings = useMemo(() => {
   const savedSettings = localStorage.getItem("settings");
