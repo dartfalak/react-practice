@@ -129,4 +129,11 @@ const workouts = useMemo(() => {
 
 const userSettings = useMemo(() => {
   const savedSettings = localStorage.getItem("settings");
+
+  if(!savedSettings) {
+    return { theme: "dark", notifications:true};
+  }
+  try {
+    const parsed = JSON.parse(savedSettings);
+  }
 }
