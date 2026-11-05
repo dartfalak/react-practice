@@ -142,5 +142,9 @@ const userSettings = useMemo(() => {
   return {
     theme: parsed.theme ?? "dark",
     notifications: parsed.notifications ?? true,
-  }
+  };
+} catch {
+      return { theme: "dark", notifications:true};
 }
+
+},[]);
