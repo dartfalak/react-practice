@@ -138,6 +138,9 @@ const userSettings = useMemo(() => {
 
     if(typeof parsed !== "object" || parsed === null || Array.isArray(parsed)) {
       return { theme: "dark", notifications:true};
-  
   } 
+  return {
+    theme: parsed.theme ?? "dark",
+    notifications: parsed.notifications ?? true,
+  }
 }
